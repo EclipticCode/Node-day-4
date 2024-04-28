@@ -1,7 +1,9 @@
 const mongoose = require ('mongoose')
 const myprocess = require("dotenv").config();
 
-const mongoDB = myprocess.parsed.MONGO_DB
+console.log(process.env.MONGO_DB , 'env')
+
+const mongoDB = process.env.MONGO_DB
 
 const connectDb =  async () => {
     await mongoose.connect(mongoDB);
