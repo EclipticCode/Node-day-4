@@ -11,6 +11,7 @@ app.use(cors())
 
 connectDb();
 
+console.log(process.env.MY_VARIABLE)
 app.get('/' , async (req,res) => {
     res.send('Server working....')
 })
